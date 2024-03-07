@@ -1,0 +1,399 @@
+Program.Sub.ScreenSU.Start
+gui.Form1..create
+gui.Form1..caption("Selection Criteria")
+gui.Form1..size(7605,2820)
+gui.Form1..minx(0)
+gui.Form1..miny(0)
+gui.Form1..position(0,0)
+gui.Form1..event(unload,unload)
+gui.Form1..alwaysontop(False)
+gui.Form1..fontname("Arial")
+gui.Form1..fontsize(8)
+gui.Form1..forecolor(0)
+gui.Form1..fontstyle(,,,,)
+gui.Form1..BackColor(-2147483633)
+gui.Form1..controlbox(True)
+gui.Form1..maxbutton(True)
+gui.Form1..minbutton(True)
+gui.Form1..mousepointer(0)
+gui.Form1..moveable(True)
+gui.Form1..sizeable(False)
+gui.Form1..ShowInTaskBar(True)
+gui.Form1..titlebar(True)
+gui.Form1.BeginningDate.create(label,"Beginning Date",True,1935,255,1,200,200,True,0,Arial,8,-2147483633,0)
+gui.Form1.BeginningDate.defaultvalue("")
+gui.Form1.BeginningDate.controlgroup(0)
+gui.Form1.lbl2.create(label,"Ending Date",True,1935,255,1,2800,200,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl2.defaultvalue("")
+gui.Form1.lbl2.controlgroup(0)
+gui.Form1.datepicker1.create(datepicker)
+gui.Form1.datepicker1.visible(True)
+gui.Form1.datepicker1.size(1935,285)
+gui.Form1.datepicker1.zorder(0)
+gui.Form1.datepicker1.position(200,400)
+gui.Form1.datepicker1.enabled(True)
+gui.Form1.datepicker1.checkbox(False)
+gui.Form1.datepicker1.defaultvalue("")
+gui.Form1.datepicker1.controlgroup(0)
+gui.Form1.datepicker2.create(datepicker)
+gui.Form1.datepicker2.visible(True)
+gui.Form1.datepicker2.size(1935,285)
+gui.Form1.datepicker2.zorder(0)
+gui.Form1.datepicker2.position(2800,400)
+gui.Form1.datepicker2.enabled(True)
+gui.Form1.datepicker2.checkbox(False)
+gui.Form1.datepicker2.defaultvalue("")
+gui.Form1.datepicker2.controlgroup(0)
+gui.Form1.chkAllDates.create(checkbox)
+gui.Form1.chkAllDates.caption("All Dates")
+gui.Form1.chkAllDates.visible(True)
+gui.Form1.chkAllDates.size(1935,255)
+gui.Form1.chkAllDates.zorder(0)
+gui.Form1.chkAllDates.position(5200,400)
+gui.Form1.chkAllDates.enabled(True)
+gui.Form1.chkAllDates.alignment(0)
+gui.Form1.chkAllDates.fontname("Arial")
+gui.Form1.chkAllDates.fontsize(8)
+gui.Form1.chkAllDates.event(click,chkalldates_click)
+gui.Form1.chkAllDates.defaultvalue("")
+gui.Form1.chkAllDates.controlgroup(0)
+gui.Form1.txtBegEmp.create(textbox,"",True,1935,285,0,200,1000,True,0,Arial,8,-2147483643,1)
+gui.Form1.txtBegEmp.defaultvalue("")
+gui.Form1.txtBegEmp.controlgroup(0)
+gui.Form1.txtEndEmp.create(textbox,"",True,1965,300,0,2800,1000,True,0,Arial,8,-2147483643,1)
+gui.Form1.txtEndEmp.defaultvalue("")
+gui.Form1.txtEndEmp.controlgroup(0)
+gui.Form1.cmdPrint.create(button)
+gui.Form1.cmdPrint.caption("Print")
+gui.Form1.cmdPrint.visible(True)
+gui.Form1.cmdPrint.size(855,375)
+gui.Form1.cmdPrint.zorder(0)
+gui.Form1.cmdPrint.position(200,1600)
+gui.Form1.cmdPrint.enabled(True)
+gui.Form1.cmdPrint.fontname("Arial")
+gui.Form1.cmdPrint.fontsize(8)
+gui.Form1.cmdPrint.event(click,cmdprint_click)
+gui.Form1.cmdPrint.defaultvalue("")
+gui.Form1.cmdPrint.controlgroup(0)
+gui.Form1.cmdBrBegEmp.create(button)
+gui.Form1.cmdBrBegEmp.caption("^")
+gui.Form1.cmdBrBegEmp.visible(True)
+gui.Form1.cmdBrBegEmp.size(405,375)
+gui.Form1.cmdBrBegEmp.zorder(0)
+gui.Form1.cmdBrBegEmp.position(2200,1000)
+gui.Form1.cmdBrBegEmp.enabled(True)
+gui.Form1.cmdBrBegEmp.fontname("Arial")
+gui.Form1.cmdBrBegEmp.fontsize(8)
+gui.Form1.cmdBrBegEmp.event(click,cmdbrbegemp_click)
+gui.Form1.cmdBrBegEmp.defaultvalue("")
+gui.Form1.cmdBrBegEmp.controlgroup(0)
+gui.Form1.lbl3.create(label,"Beginning Employee",True,1935,255,1,200,800,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl3.defaultvalue("")
+gui.Form1.lbl3.controlgroup(0)
+gui.Form1.lbl4.create(label,"Ending Employee",True,1935,255,1,2800,800,True,0,Arial,8,-2147483633,0)
+gui.Form1.lbl4.defaultvalue("")
+gui.Form1.lbl4.controlgroup(0)
+gui.Form1.cmdBrEndEmp.create(button)
+gui.Form1.cmdBrEndEmp.caption("^")
+gui.Form1.cmdBrEndEmp.visible(True)
+gui.Form1.cmdBrEndEmp.size(435,375)
+gui.Form1.cmdBrEndEmp.zorder(0)
+gui.Form1.cmdBrEndEmp.position(4900,1000)
+gui.Form1.cmdBrEndEmp.enabled(True)
+gui.Form1.cmdBrEndEmp.fontname("Arial")
+gui.Form1.cmdBrEndEmp.fontsize(8)
+gui.Form1.cmdBrEndEmp.event(click,cmdbrendemp_click)
+gui.Form1.cmdBrEndEmp.defaultvalue("")
+gui.Form1.cmdBrEndEmp.controlgroup(0)
+gui.Form1.chkAllEmps.create(checkbox)
+gui.Form1.chkAllEmps.caption("All Employees")
+gui.Form1.chkAllEmps.visible(True)
+gui.Form1.chkAllEmps.size(1935,255)
+gui.Form1.chkAllEmps.zorder(0)
+gui.Form1.chkAllEmps.position(5900,1000)
+gui.Form1.chkAllEmps.enabled(True)
+gui.Form1.chkAllEmps.alignment(0)
+gui.Form1.chkAllEmps.fontname("Arial")
+gui.Form1.chkAllEmps.fontsize(8)
+gui.Form1.chkAllEmps.event(click,chkallemps_click)
+gui.Form1.chkAllEmps.defaultvalue("")
+gui.Form1.chkAllEmps.controlgroup(0)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.Global.BIRunID.Declare(Long,0)
+Variable.Global.BILogID.Declare(Long,0)
+Variable.Global.sParamVals.Declare(String)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+'ERROR HANDLING ABOVE
+
+'DECLARE VARIABLES
+V.Local.sError.Declare(String)
+
+F.ODBC.Connection!conX.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+Gui.Form1..Show
+
+'TERMINATE SUBROUTINE
+F.Intrinsic.Control.ExitSub
+
+'ERROR HANDLING BELOW
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3502_UMP_OCC_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.unload.Start
+F.Intrinsic.Control.End
+
+Program.Sub.unload.End
+
+program.sub.chkalldates_click.start
+F.Intrinsic.Control.SetErrorHandler("chkalldates_click_Err")
+F.Intrinsic.Control.ClearErrors
+'ERROR HANDLING ABOVE
+
+'DECLARE VARIABLES
+V.Local.sError.Declare(String)
+
+'enable/disable datepickers based on if All Dates is checked or not
+F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,1)
+	Gui.Form1.datepicker1.Enabled(false)
+	Gui.Form1.datepicker2.Enabled(false)
+F.Intrinsic.Control.Else
+	Gui.Form1.datepicker1.Enabled(true)
+	Gui.Form1.datepicker2.Enabled(true)
+F.Intrinsic.Control.EndIf
+
+'TERMINATE SUBROUTINE
+F.Intrinsic.Control.ExitSub
+
+'ERROR HANDLING BELOW
+F.Intrinsic.Control.Label("chkalldates_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3502_UMP_OCC_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkalldates_click.end
+
+program.sub.cmdbrbegemp_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdbrbegemp_click_Err")
+F.Intrinsic.Control.ClearErrors
+'ERROR HANDLING ABOVE
+
+'DECLARE VARIABLES
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+Function.Intrinsic.String.Split("Emp ID*!*Employee Name","*!*",Variable.local.sTitles)
+Function.Intrinsic.String.Split("800*!*4000","*!*",Variable.local.iWidths)
+Function.Intrinsic.UI.Browser("Select an Employee","conX","Select distinct Employee,Name From ATG_EMP_POINTS_OCC",Variable.Local.sTitles,Variable.Local.iWidths,Variable.Local.sRet)
+Function.Intrinsic.Control.If(Variable.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.Else
+	Function.Intrinsic.String.Split(Variable.Local.sRet,"*!*",Variable.Local.sRet)
+	Gui.Form1.txtBegEmp.Text(V.Local.sRet(0))
+	Gui.Form1.txtEndEmp.Text(V.Local.sRet(0))
+Function.Intrinsic.Control.EndIf
+
+
+
+'TERMINATE SUBROUTINE
+F.Intrinsic.Control.ExitSub
+
+'ERROR HANDLING BELOW
+F.Intrinsic.Control.Label("cmdbrbegemp_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3502_UMP_OCC_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdbrbegemp_click.end
+
+program.sub.cmdbrendemp_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdbrendemp_click_Err")
+F.Intrinsic.Control.ClearErrors
+'ERROR HANDLING ABOVE
+
+'DECLARE VARIABLES
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+V.Local.iWidths.Declare(Long)
+
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+Function.Intrinsic.String.Split("Emp ID*!*Employee Name","*!*",Variable.local.sTitles)
+Function.Intrinsic.String.Split("800*!*4000","*!*",Variable.local.iWidths)
+Function.Intrinsic.UI.Browser("Select an Employee","conX","Select distinct Employee,Name From ATG_EMP_POINTS_OCC",Variable.Local.sTitles,Variable.Local.iWidths,Variable.Local.sRet)
+Function.Intrinsic.Control.If(Variable.Local.sRet,"=","***CANCEL***")
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.Else
+	Function.Intrinsic.String.Split(Variable.Local.sRet,"*!*",Variable.Local.sRet)
+	Gui.Form1.txtEndEmp.Text(V.Local.sRet(0))
+Function.Intrinsic.Control.EndIf
+
+'TERMINATE SUBROUTINE
+F.Intrinsic.Control.ExitSub
+
+'ERROR HANDLING BELOW
+F.Intrinsic.Control.Label("cmdbrendemp_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3502_UMP_OCC_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdbrendemp_click.end
+
+program.sub.chkallemps_click.start
+F.Intrinsic.Control.SetErrorHandler("chkallemps_click_Err")
+F.Intrinsic.Control.ClearErrors
+'ERROR HANDLING ABOVE
+
+'DECLARE VARIABLES
+V.Local.sError.Declare(String)
+
+'enable/disable employee browsers based on if All Employees is checked or not.
+F.Intrinsic.Control.If(V.Screen.Form1!chkAllEmps.Value,=,1)
+	Gui.Form1.txtBegEmp.Text("")
+	Gui.Form1.txtBegEmp.Enabled(false)
+	Gui.Form1.txtEndEmp.Text("")
+	Gui.Form1.txtEndEmp.Enabled(false)
+	Gui.Form1.cmdBrBegEmp.Enabled(false)
+	Gui.Form1.cmdBrEndEmp.Enabled(false)
+F.Intrinsic.Control.Else
+	Gui.Form1.txtBegEmp.Enabled(true)
+	Gui.Form1.txtEndEmp.Enabled(true)
+	Gui.Form1.cmdBrBegEmp.Enabled(true)
+	Gui.Form1.cmdBrEndEmp.Enabled(true)
+F.Intrinsic.Control.EndIf
+
+'TERMINATE SUBROUTINE
+F.Intrinsic.Control.ExitSub
+
+'ERROR HANDLING BELOW
+F.Intrinsic.Control.Label("chkallemps_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3502_UMP_OCC_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.chkallemps_click.end
+
+program.sub.cmdprint_click.start
+F.Intrinsic.Control.SetErrorHandler("cmdprint_click_Err")
+F.Intrinsic.Control.ClearErrors
+'ERROR HANDLING ABOVE
+
+'DECLARE VARIABLES
+V.Local.sError.Declare(String)
+V.Local.sPVals.Declare(String)
+V.Local.sDate.Declare(String)
+V.Local.eDate.Declare(String)
+
+Gui.Form1..Visible(false)
+
+F.Global.BI.GetRunID(V.Global.BIRunID)
+F.Global.BI.startLogging(V.Global.BIRunID,-1,-1,"",V.Global.BILogID)
+
+'param vals for reference in control structures
+'V.Local.sParams.Set("StartDate*!*EndDate*!*StartEmp*!*EndEmp")
+F.Intrinsic.String.Format(V.Screen.Form1!datepicker1.Value,"yyyymmdd",V.local.sDate)
+F.Intrinsic.String.Format(V.Screen.Form1!datepicker2.Value,"yyyymmdd",V.Local.eDate)
+
+'set parameters based on screen selection.
+F.Intrinsic.Control.If(V.Screen.Form1!chkAllDates.Value,=,1,"AND",V.Screen.Form1!chkAllEmps.Value,=,1)
+	F.Intrinsic.String.Concat("19000101","*!*","20201231","*!*","00000","*!*","99999",V.Local.sPVals)
+	V.Global.sParamVals.Set(V.Local.sPVals)
+F.Intrinsic.Control.ElseIf(V.Screen.Form1!chkAllDates.Value,=,1,"AND",V.Screen.Form1!chkAllEmps.Value,=,0)
+	F.Intrinsic.Control.If(V.Screen.Form1!txtBegEmp.Text,=,"","OR",V.Screen.Form1!txtEndEmp.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Must Select Range Of Employees","Selection Error")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat("19000101","*!*","20201231","*!*",V.Screen.Form1!txtBegEmp.Text,"*!*",V.Screen.Form1!txtEndEmp.Text,V.Local.sPVals)
+		V.Global.sParamVals.Set(V.Local.sPVals)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.ElseIf(V.Screen.Form1!chkAllDates.Value,=,0,"AND",V.Screen.Form1!chkAllEmps.Value,=,1)
+	F.Intrinsic.String.Concat(V.Local.sDate,"*!*",V.Local.eDate,"*!*","00000","*!*","99999",V.Local.sPVals)
+	V.Global.sParamVals.Set(V.Local.sPVals)
+F.Intrinsic.Control.ElseIf(V.Screen.Form1!chkAllDates.Value,=,0,"AND",V.Screen.Form1!chkAllEmps.Value,=,0)
+	F.Intrinsic.Control.If(V.Screen.Form1!txtBegEmp.Text,=,"","OR",V.Screen.Form1!txtEndEmp.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Must Select Range Of Employees","Selection Error")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat(V.Local.sDate,"*!*",V.Local.eDate,"*!*",V.Screen.Form1!txtBegEmp.Text,"*!*",V.Screen.Form1!txtEndEmp.Text,V.Local.sPVals)
+		V.Global.sParamVals.Set(V.Local.sPVals)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Global.BI.StopLogging(V.Global.BILogID)
+F.Intrinsic.Control.CallSub(Callbi)
+
+'TERMINATE SUBROUTINE
+F.Intrinsic.Control.ExitSub
+
+'ERROR HANDLING BELOW
+F.Intrinsic.Control.Label("cmdprint_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3502_UMP_OCC_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmdprint_click.end
+
+Program.Sub.CallBI.Start
+F.Intrinsic.Control.SetErrorHandler("CallBI_Err")
+F.Intrinsic.Control.ClearErrors
+'ERROR HANDLING ABOVE
+
+'DECLARE VARIABLES
+V.Local.sError.Declare(String)
+V.Local.iRet.Declare(String)
+V.Local.sParams.Declare(String)
+
+V.Local.sParams.Set("StartDate*!*EndDate*!*StartEmp*!*EndEmp")
+F.Intrinsic.Debug.DumpVariableList
+F.Global.BI.RunReportPreProcessor(V.Global.BIRunID,V.Global.BILogID,V.Local.sParams,V.global.sParamVals,"",-1,True,"",-1,"",-1,"","",V.Local.iRet)
+
+F.Intrinsic.Control.CallSub(Unload)
+
+'TERMINATE SUBROUTINE
+F.Intrinsic.Control.ExitSub
+
+'ERROR HANDLING BELOW
+F.Intrinsic.Control.Label("CallBI_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3502_UMP_OCC_RPT.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.CallBI.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_UMP_OCC_RPT$}$SFF$}$6/20/2014
+Program.Sub.Comments.End
+
